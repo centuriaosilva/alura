@@ -1,35 +1,35 @@
 var titulo = document.querySelector(".titulo");
-titulo.textContent = "Site suporte";
+titulo.textContent = "Academia Centurião";
 
 var atletas = document.querySelectorAll(".atleta");
 
-for (var i = 0; i < personagem.length; i++) {
+for (var i = 0; i < atletas.length; i++) {
 
-    var personagem = personagem[i];
+    var atleta = atletas[i];
 
-    var tdpoder = personagem.querySelector(".info-poder");
-    var poder = tdPeso.textContent;
+    var tdPeso = atleta.querySelector(".info-peso");
+    var peso = tdPeso.textContent;
 
-    var tdelemento = personagem.querySelector(".info-elemento");
-    var elemento = tdAltura.textContent;
+    var tdAltura = atleta.querySelector(".info-altura");
+    var altura = tdAltura.textContent;
 
-    var tdstamina = atleta.querySelector(".info-stamina");
+    var tdImc = atleta.querySelector(".info-imc");
 
     var pesoEhValido = validaPeso(peso);
-    var elementoEhValida = validaElemento(elemento);
+    var alturaEhValida = validaAltura(altura);
 
     if (!pesoEhValido) {
         console.log("Peso inválido!");
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido";
-        atleta.classList.add("atleta-invalido");
+        paciente.classList.add("atleta-invalido");
     }
 
     if (!alturaEhValida) {
         console.log("Altura inválida!");
         alturaEhValida = false;
         tdImc.textContent = "Altura inválida";
-        atleta.classList.add("atleta-invalido");
+        paciente.classList.add("atleta-invalido");
     }
 
     if (pesoEhValido && alturaEhValida) {
