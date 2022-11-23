@@ -1,7 +1,7 @@
 var titulo = document.querySelector(".titulo");
-titulo.textContent = "Guilda suporte";
+titulo.textContent = "Site suporte";
 
-var personagens = document.querySelectorAll(".personagem");
+var atletas = document.querySelectorAll(".atleta");
 
 for (var i = 0; i < personagem.length; i++) {
 
@@ -13,23 +13,23 @@ for (var i = 0; i < personagem.length; i++) {
     var tdelemento = personagem.querySelector(".info-elemento");
     var elemento = tdAltura.textContent;
 
-    var tdstamina = personagem.querySelector(".info-stamina");
+    var tdstamina = atleta.querySelector(".info-stamina");
 
-    var pesoEhValido = validaPoder(poder);
+    var pesoEhValido = validaPeso(peso);
     var elementoEhValida = validaElemento(elemento);
 
     if (!pesoEhValido) {
-        console.log("Poder inválido!");
+        console.log("Peso inválido!");
         pesoEhValido = false;
-        tdImc.textContent = "Poder inválido";
-        personagem.classList.add("personagem-invalido");
+        tdImc.textContent = "Peso inválido";
+        atleta.classList.add("atleta-invalido");
     }
 
     if (!alturaEhValida) {
         console.log("Altura inválida!");
         alturaEhValida = false;
         tdImc.textContent = "Altura inválida";
-        personagem.classList.add("personagem-invalido");
+        atleta.classList.add("atleta-invalido");
     }
 
     if (pesoEhValido && alturaEhValida) {
